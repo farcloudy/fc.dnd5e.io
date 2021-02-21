@@ -3,6 +3,7 @@
 	margin:0;
 	font-family:FT;
 	font-size:18px;
+	text-align:justify;
 }
 /* 链接 */
 a:link,a:visited,a:hover,a:active{
@@ -45,6 +46,28 @@ p.引用2{
 p.内容1{
 	text-indent:0em;
 }
+/* #### */
+div.边栏{
+	background-color:#e0e5c1;
+	padding:1em;
+	float:right;
+	max-width:40%;
+	margin:1em;
+	margin-right:0;
+	font-size:16px;
+}
+div.边栏 p,b,span{
+	font-family:BL;
+	font-size:inherit;
+}
+/* #### */
+table{
+	border-collapse:collapse;
+}
+td{
+	padding:2px;
+}
+/* #### */
 h1{
 	color:#800000;
 	font-weight:bold;
