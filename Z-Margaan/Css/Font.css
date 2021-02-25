@@ -1,0 +1,35 @@
+/* 用于标题 */
+@font-face {
+	font-family:FT;
+	src:local("黑体");
+}
+@font-face {
+	font-family:FT;
+	src:local("Times New Roman");
+	unicode-range:U+21-7E;
+}
+/* 用于正文 */
+@font-face {
+	font-family:FC;
+	src:local("宋体");
+}
+@font-face {
+	font-family:FC;
+	src:local("Cambria");
+	unicode-range:U+21-7E;
+}
+@font-face {
+	font-family:FC;
+	src:local("Times New Roman");
+	unicode-range:U+28-29;
+}
+/* 用于边栏 */
+@font-face {
+	font-family:BL;
+	src:local("微软雅黑");
+}
+@font-face {
+	font-family:BL;
+	src:local("Calibri");
+	unicode-range:U+21-7E;
+}
