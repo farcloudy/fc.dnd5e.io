@@ -2,13 +2,13 @@ body{
 	margin:auto;
 	color:#ffffff;
 	font-family: "microsoft yahei";
-}
-div.resist_bg{
 	background-image: url("Regist_bg.jpg");
 	background-repeat:no-repeat;
+	background-size:cover;
+}
+div.resist_bg{
 	margin:auto;
-	background-size: 100% 100%;
-	height: 100%;
+	height:100%;
 }
 
 div.logo{
