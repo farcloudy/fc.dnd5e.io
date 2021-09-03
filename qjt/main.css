@@ -36,36 +36,35 @@ div.resist_bg{
 .info_box {
 	padding-top: 30px;
 }
-
-.info_list {
-	width: 100%;
-	margin: 0 auto;
-	color: #fff;
-}
-.codeimg{
-	margin: auto;
-	width: 38.5%;
-}
-	.codeimg img{
+	.info_list {
 		width: 100%;
-		height: inherit;
+		margin: 0 auto;
+		color: #fff;
 	}
-	.info_list .list_row {
+	.list_row {
 		font-size: 15pt;
 		overflow: hidden;
 	}
-		.info_list .list_row .row_left {
+		.codeimg{
+			margin: auto;
+			width: 38.5%;
+		}
+			.codeimg img{
+				width: 100%;
+				height: inherit;
+			}
+		.row_left {
 			width: 45%;
 			text-align: right;
 			float: left;
 		}
-			.info_list .list_row .row_left span {
+			.row_left span {
 				display: inline-block;
-				width: 60pt;
+				/*width: 60pt;*/
 				text-align: justify;
 				text-align-last: justify;
 			}
-		.info_list .list_row .row_right {
+		.row_right {
 			width: 55%;
 			text-align: left;
 			float: left;
