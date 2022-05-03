@@ -1,5 +1,5 @@
 function SHElement(Eid, Ety){
-	var TButton = 'span' + Eid;
+	var TButton = 'button' + Eid;
 	var Target = Ety + Eid;
 	if ($(TButton).text() == '展开'){
 		$(Ety).show();

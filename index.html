@@ -40,8 +40,18 @@
 			<div style="padding: 2em;">
 				<h1 id="C0">胡琴菜园-A股上市公司并购数据库<img src="Art/logo.png" style="height: 2.5em;"/></h1>
 				
-				<p class="Note">版本：1.0</p>
-				<p class="Note">编订日期：2022-05-03</p>
+				
+
+				<div style="height: 4em;">
+					<div style="height: 100%;float: left;margin-right: 2em;">
+						<img src="Art/Hu.gif" style="width: 4em;"/>
+					</div>
+					<div style="height: 100%;float: left;vertical-align: middle;">
+						<p class="Note">版本：1.1</p>
+						<p class="Note">编订日期：2022-05-03</p>
+					</div>
+				</div>
+
 				<h2 id="C1">一、数据库说明与用途</h2>
 				<p>本数据库收集A股市场中，由上市公司发起（作为买方）并完成的并购交易。原始数据来源于CSMAR数据库，但由于并购交易复杂、并购公告标准化程度低，有大量数据需要手工收集完善。</p>
 				<p>本数据库的用途包括但不限于：</p>
@@ -55,8 +65,11 @@
 				<h2 id="C2">二、数据库的录入说明</h2>
 				<h3 id="C21">（一）全变量基础说明</h3>
 				<p>数据库包含的变量（列）如下表所示。其中，标为<span style="background-color: #ddebf7;">&emsp;&emsp;</span>的变量说明需要手工填列。</p>
-				<p class="NoteTitle">表1 数据库变量说明&emsp;<span onclick="SHElement('#Table1', 'table')" id="Table1">折叠</span>
-				<table id="Table1">
+				<p class="NoteTitle">
+					表1 数据库变量说明&emsp;
+					<button onclick="SHElement('#Table1', 'table')" id="Table1">展开</button>
+				</p>
+				<table id="Table1" style="display: none;">
 					<tr>
 						<td class="First Left">列名称</td>
 						<td class="First">变量说明</td>
@@ -202,7 +215,7 @@
 
 				<p>交易编号的格式为<span style="font-style: italic;">Id+Year+Num</span>。其中，Id为六位数股票代码，Year为四位数年份代码，Num为两位数的序号代码。</p>
 				<p>例如，对于上市公司（Id:000016）在2017年的第1笔并购，编号为：</p>
-				<code><span style="background-color: #ddecf7;">000016</span><span style="background-color: #e2efd9;">2017</span><span style="background-color: #fff2cc;">01</span></code>
+				<code style="margin: 0 2em 0 2em;"><span style="background-color: #ddecf7;">000016</span><span style="background-color: #e2efd9;">2017</span><span style="background-color: #fff2cc;">01</span></code>
 
 				<h4 id="C222">2.&emsp;并购的地理要素：跨[ ]并购</h4>
 				<p>若并购类型为“跨国、跨省或跨市”，则在对应变量下方填1。</p>
@@ -230,14 +243,19 @@
 				<h4 id="C231">1.&emsp;确定公告搜索范围</h4>
 
 				<p>在网站右上角的搜索栏粘贴或输入上市公司的代码，进入页面。</p>
-				<img src="Art/Step1Img1.png"/>
+
+				<div style="width: 100%;">
+					<img src="Art/Step1Img1.png" style="margin: auto;"/>
+				</div>
 				<p class="NoteTitle">图1</p>
 				<p>将[首次公告日期]和[最新公告日期]粘贴进入日期选择器内。由此确定好搜索范围。</p>
 				<img src="Art/Step1Img2.png"/>
 				<p class="NoteTitle">图2</p>
 
+				
 				<h4 id="C232">2.&emsp;确定并购公告</h4>
 				<p>A股市场的并购公告大致可以分为两种类型。其一是以发行股份购买资产为代表的报告书式公告，上市公司需要披露并购交易计划报告书，内容十分详尽。另一种是普通式公告，只包含较少的资料。</p>
+				<p class="NoteTitle">表2 不同类型的并购公告</p>
 				<table>
 					<tr>
 						<td></td>
@@ -261,7 +279,7 @@
 					</tr>
 				</table>
 				<p>我们首先在确定好的公告范围中搜索关键字“报告书”，确定是否为报告书式公告。</p>
-				<img src="Art/Step2Img1.png"/>
+				<img src="Art/Step2Img1.png""/>
 				<p class="NoteTitle">图3</p>
 				<p>如 图3 所示，可以搜索到[报告书]与[报告书摘要]，我们选择报告书作为原始数据的来源。</p>
 				<br />
@@ -277,12 +295,15 @@
 
 				<p>由于普通式的并购公告篇幅很短，浏览方便，本节以报告书式公告为例，说明寻找资料的过程。</p>
 				<p>首先我们打开公告。</p>
-				<img src="Art/Step3Img1.png" style="display: inline;width:45%;"/>
-				<img src="Art/Step3Img2.png" style="display: inline;width:45%;"/>
+
+				<img src="Art/Step3Img1.png" style="display: inline;width:45%;text-align: center;"/>
+				<img src="Art/Step3Img2.png" style="display: inline;width:45%;text-align: center;"/>
+
 				<p class="NoteTitle">图5</p>
 				<p>在“交易的目的”中，一般会介绍双方的行业和产品，由此可以判断横向、纵向还是混合并购。</p>
 				<p>在“交易的具体方案”中，包含有并购的价格、支付方式等信息，以及收购比例、是否通过本次并购实现控制（合并报表）。</p>
 				<p>自此往下，可以翻到业绩承诺的相关信息。也可以使用 ctrl+F 进行搜索。</p>
+				<p>有些业绩承诺又叫盈利预测补偿协议，具体可在报告书中“本次交易相关合同的主要内容”这一章节中找到。</p>
 				<p>最后，公告中有对上市公司和标的公司的介绍章节，可以判断双方的地理位置（有时也可通过公司名字判断）。</p>
 
 				<h4 id="C234">3.&emsp;填列财务数据</h4>
@@ -315,6 +336,7 @@
 				<p>原始数据库中出现重复条目：删除此行。</p>
 				<p>审计报告中只有财务报表附注，没有财务报表：实为没有审计报告，在并购公告中寻找财务数据。</p>
 				<p>其他情况：随时补充。</p>
+				<br /><hr /><br />
 			</div>
 		</div>
 	</body>
