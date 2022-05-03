@@ -2,88 +2,135 @@
 	padding:0;
 	margin:0;
 	font-family:FT;
-	font-size:18px;
 	text-align:justify;
+	font-size: 24px;
+	box-sizing: border-box;
 }
-/* 链接 */
-a:link,a:visited,a:hover,a:active{
+
+img.GuideController {
+	width: 2em;
+}
+
+/* 左右大框 */
+html, body {
+	height: 100%;
+	width: 100%;
+}
+div.LeftGuide {
+	float: left;
+	position: fixed;
+	height: 100%;
+	padding: 1em;
+	background-color: antiquewhite;
+	width: 15%;
+	border-right: 4px solid #000;
+	z-index: 1;
+}
+div.LeftGuide a{
+	display: block;
+	font-size: 0.75em;
+	line-height: 2;
+}
+div.LeftGuide a.Sec{
+	margin-left: 1.5em;
+}
+div.LeftGuide a.Sec:first-letter{
+	margin-left: -0.75em;
+}
+div.LeftGuide a.Third {
+	margin-left: 2.25em;
+}
+div.LeftGuide a.Third:first-letter {
+	margin-left: -1.5em;
+}
+
+div.LeftGuide a:link,a:visited,a:hover,a:active{
+	display: block;
+	font-size: 0.75em;
+	line-height: 2;
+
 	color: #000;
 	text-decoration:none;
 }
-/* ####框架 */
-body{width:100%;}
-iframe{
-	position:absolute;
-	left:20%;
-	width:80%;
-	height:100%;
-	background-color:#f4f4f4;
+
+
+div.Main {
+	height: 100%;
+	width: 100%;
+	padding-left: 20%;
+	/* background-color: #f2f2f2; */
 }
-div.A{
-	position:fixed;
-	background-color:#f0f0f0;
-	width:20%;
-	height:100%;
-	overflow:auto;
-}
-/* #### */
-span{
-	font-style:italic;
-	font-family:FC;
-}
-p{
-	text-indent:2em;
-	font-family:FC;
-	line-height:175%
-}
-p.引用1{
-	font-style:italic;
-}
-p.引用2{
-	text-indent:0em;
-	text-align:right;
-}
-p.内容1{
-	text-indent:0em;
-}
-/* #### */
-div.边栏{
-	background-color:#e0e5c1;
-	padding:1em;
-	float:right;
-	max-width:40%;
-	margin:1em;
-	margin-right:0;
-	font-size:16px;
-}
-div.边栏 p,b,span{
-	font-family:BL;
-	font-size:inherit;
-}
-/* #### */
-table{border-collapse:collapse;}
-table.TfC td{
-	text-align:center;
-}
-/* #### */
+
+/* 各级标题 */
 h1{
-	color:#800000;
-	font-weight:bold;
-	font-size:3em;
+	font-size: 2.5em;
+	font-weight: bold;
+	padding: 1em 0;
 }
 h2{
-	color:#800000;
-	font-weight:bold;
-	font-size:2em;
+	font-size: 2em;
+	font-weight: bold;
+	padding: 1em 0;
 }
-h3{
-	color:#800000;
-	font-weight:bold;
-	font-size:1.5em;
+h3 {
+	font-size: 1.5em;
+	font-weight: bold;
+	padding: 0.5em 0;
 }
-h4{
-	color:#800000;
-	font-weight:bold;
-	font-size:1em;
+h4 {
+	font-weight: bold;
+	text-indent: 2em;
+	line-height: 2;
 }
-sub,sup{font-size:75%;}
+
+p {
+	text-indent: 2em;
+	line-height: 2;
+}
+
+p.Note {
+	text-indent: 0em;
+	font-size: 0.75em;
+}
+p.NoteTitle {
+	text-indent: 0em;
+	font-size: 0.75em;
+	text-align: center;
+	/* display:inline; */
+}
+code {
+	text-align: center;
+	width: 100%;
+	background-color: #d8d8d8;
+	display: block;
+}
+
+ul{
+	padding-left: 2em;
+	line-height: 2;
+}
+
+/* 表格 */
+table {
+	border-collapse: collapse;
+	margin: auto;
+	border-top: 4px solid black;
+	border-bottom: 4px solid black;
+}
+td {
+	border-bottom: 1px solid black;
+	font-size: 0.75em;
+	padding: 0.25em;
+}
+td.Left {
+	border-right: 1px solid black;
+	width:20%;
+}
+td.First {
+	text-align: center;
+	font-weight: bold;
+	border-bottom: 4px solid black;
+}
+tr.VNeed{
+	background-color: #ddebf7;
+}
