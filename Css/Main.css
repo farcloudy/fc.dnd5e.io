@@ -44,7 +44,7 @@ div.LeftGuide a.Third:first-letter {
 	margin-left: -1.5em;
 }
 
-div.LeftGuide a:link,a:visited,a:hover,a:active{
+div.LeftGuide a:link,div.LeftGuide div.LeftGuide a:visited,div.LeftGuide a:hover,div.LeftGuide a:active{
 	display: block;
 	font-size: 0.75em;
 	line-height: 2;
