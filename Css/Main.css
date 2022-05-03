@@ -7,6 +7,17 @@
 	box-sizing: border-box;
 }
 
+
+a#正文{
+	display: inline;
+	font-size: 1em;
+	line-height: 2;
+}
+
+a#正文:link, a#正文:visited, a#正文:hover, a#正文:active{
+	color: blue;
+}
+
 img.GuideController {
 	width: 2em;
 }
@@ -44,7 +55,7 @@ div.LeftGuide a.Third:first-letter {
 	margin-left: -1.5em;
 }
 
-div.LeftGuide a:link,div.LeftGuide div.LeftGuide a:visited,div.LeftGuide a:hover,div.LeftGuide a:active{
+div.LeftGuide a:link, div.LeftGuide a:visited, div.LeftGuide a:hover, div.LeftGuide a:active{
 	display: block;
 	font-size: 0.75em;
 	line-height: 2;
