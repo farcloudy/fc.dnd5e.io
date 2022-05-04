@@ -1,0 +1,357 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>并购数据库录入说明</title>
+		
+		<link rel="icon" href="../../Art/logo.png" type="image/PNG" sizes="16x16" />
+		<!--
+			<link rel="icon" href="../../Art/Hu.gif" type="image/gif" sizes="16x16" />
+		-->
+		<link rel="stylesheet" type="text/css" href="../../Css/Font.css" />
+		<link rel="stylesheet" type="text/css" href="../../Css/Main.css" />
+		<link rel="stylesheet" type="text/css" href="../../Css/Text.css" />
+		<script src="../../Js/jquery-3.5.1.js"></script>
+		<script src="../../Js/Main.js"></script>
+	</head>
+	<body>
+		<div class="LeftGuide">
+			<div class="LeftGuide2">
+				<p class="Caption" style="font-weight: bold;">目录</p>
+				<a href="#C1">一、数据库说明与用途</a>
+				<a href="#C2">二、数据库的录入说明</a>
+					<a href="#C21"class="Sec">（一）全变量基础说明</a>
+					<a href="#C22"class="Sec">（二）变量具体录入说明</a>
+						<a href="#C221"class="Third">1.&emsp;交易编号</a>
+						<a href="#C222"class="Third">2.&emsp;并购的地理要素</a>
+						<a href="#C223"class="Third">3.&emsp;并购的行业要素</a>
+						<a href="#C224" class="Third">4.&emsp;并购的目的要素</a>
+						<a href="#C225" class="Third">5.&emsp;并购的支付方式</a>
+					<a href="#C23" class="Sec">（三）数据录入流程参考</a>
+						<a href="#C231" class="Third">1.&emsp;确定公告搜索范围</a>
+						<a href="#C232" class="Third">2.&emsp;确定并购公告</a>
+						<a href="#C233" class="Third">3.&emsp;在并购公告中寻找资料</a>
+						<a href="#C234" class="Third">4.&emsp;填列财务数据</a>
+					<a href="#C24" class="Sec">（四）可能遇到的特殊情况</a>
+						<a href="#C241" class="Third">1.&emsp;同时收购多家企业</a>
+						<a href="#C242" class="Third">2.&emsp;收购与增资</a>
+						<a href="#C24Z" class="Third">3.&emsp;其他情况</a>
+			</div>
+			<!--
+			<div>
+				<img class="GuideController" id="PutAway" src="../../Art/PutAway.png"/>
+				<img class="GuideController" id="PutUp" src="../../Art/PutUp.png" style="display: none;"/>
+			</div>
+			-->
+		</div>
+		<div style="position: fixed;padding-left: 20%;top: 0em;width: 100%;background-color: #fff;border-bottom: 2px solid #000;">
+			<h1 id="C0">A股上市公司并购数据库<img src="../../Art/logo.png" style="height: 1em;"/>录入说明</h1>
+			<p><a href="../../index.html">回到空无一物的主页</a></p>
+		</div>
+		<div class="Main">
+			<div style="padding-top: 7em;">
+				<div style="height: 4em;">
+					<div style="height: 100%;float: left;margin-right: 2em;">
+						<img src="../../Art/Hu.gif" style="width: 4em;"/>
+					</div>
+					<div style="height: 100%;float: left;vertical-align: middle;">
+						<p class="Note">版本：1.2</p>
+						<p class="Note">编订日期：2022-05-03</p>
+					</div>
+				</div>
+
+				<h2 id="C1">一、数据库说明与用途</h2>
+				<p>本数据库收集A股市场中，由上市公司发起（作为买方）并完成的并购交易。原始数据来源于CSMAR数据库，但由于并购交易复杂、并购公告标准化程度低，有大量数据需要手工收集完善。</p>
+				<p>本数据库的用途包括但不限于：</p>
+				<ul>
+					<li>实证论文的核心数据；</li>
+					<li>从并购报告书中取得全面的行业分析资料；</li>
+					<li>挑选有特点的并购案例;</li>
+					<li>介绍A股并购活动整体情况</li>
+				</ul>
+
+				<h2 id="C2">二、数据库的录入说明</h2>
+				<h3 id="C21">（一）全变量基础说明</h3>
+				<p>数据库包含的变量（列）如下表所示。其中，标为<span style="background-color: #ddebf7;">&emsp;&emsp;</span>的变量说明需要手工填列。</p>
+				<p class="Caption">
+					表1 数据库变量说明&emsp;
+					<button onclick="SHElement('#Table1', 'table')" id="Table1">展开</button>
+				</p>
+				<table id="Table1" style="display: none;">
+					<tr>
+						<td class="First Left">列名称</td>
+						<td class="First">变量说明</td>
+					</tr>
+					<tr>
+						<td class="Left">证券代码</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="Left">首次交易日期</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="Left">最新公告日期</td>
+						<td></td>
+					</tr>
+					<tr class="VNeed">
+						<td class="Left">交易编号</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="Left">标的方</td>
+						<td></td>
+					</tr>
+					<tr><td colspan="2">&emsp;</td></tr>
+					<tr class="VNeed">
+						<td class="Left">无审计报告</td>
+						<td>审计报告未公布、或无财务报表则填1；否则留空</td>
+					</tr>
+					<tr class="VNeed">
+						<td class="Left">公告链接</td>
+						<td>并购公告的链接</td>
+					</tr>
+					<tr class="VNeed">
+						<td class="Left">收购比例</td>
+						<td>本次收购标的公司股权的比例</td>
+					</tr>
+					<tr class="VNeed">
+						<td class="Left">控制</td>
+						<td>通过本次并购控制标的方则填1；否则留空</td>
+					</tr>
+					<tr><td colspan="2">&emsp;</td></tr>
+					<tr class="VNeed">
+						<td class="Left">跨国并购</td>
+						<td></td>
+					</tr>
+					<tr class="VNeed">
+						<td class="Left">跨省并购</td>
+						<td></td>
+					</tr>
+					<tr class="VNeed">
+						<td class="Left">跨市并购</td>
+						<td></td>
+					</tr>
+					<tr><td colspan="2">&emsp;</td></tr>
+					<tr class="VNeed">
+						<td class="Left">横向并购</td>
+						<td></td>
+					</tr>
+					<tr class="VNeed">
+						<td class="Left">纵向并购</td>
+						<td></td>
+					</tr>
+					<tr class="VNeed">
+						<td class="Left">混合并购</td>
+						<td></td>
+					</tr>
+					<tr><td colspan="2">&emsp;</td></tr>
+					<tr class="VNeed">
+						<td class="Left">产品</td>
+						<td></td>
+					</tr>
+					<tr class="VNeed">
+						<td class="Left">许可</td>
+						<td></td>
+					</tr>
+					<tr class="VNeed">
+						<td class="Left">人力</td>
+						<td></td>
+					</tr>
+					<tr class="VNeed">
+						<td class="Left">市场</td>
+						<td></td>
+					</tr>
+					<tr class="VNeed">
+						<td class="Left">资产</td>
+						<td></td>
+					</tr>
+					<tr class="VNeed">
+						<td class="Left">技术</td>
+						<td></td>
+					</tr>
+					<tr><td colspan="2">&emsp;</td></tr>
+					<tr class="VNeed">
+						<td class="Left">现金支付</td>
+						<td></td>
+					</tr>
+					<tr class="VNeed">
+						<td class="Left">股票支付</td>
+						<td></td>
+					</tr>
+					<tr class="VNeed">
+						<td class="Left">可转债支付</td>
+						<td></td>
+					</tr>
+					<tr><td colspan="2">&emsp;</td></tr>
+					<tr class="VNeed">
+						<td class="Left">业绩承诺原文</td>
+						<td></td>
+					</tr>
+					<tr><td colspan="2">&emsp;</td></tr>
+					</tr>
+						<td class="Left">标的账面价值</td>
+						<td></td>
+					</tr>
+					<tr class="VNeed">
+						<td class="Left">评估基准日</td>
+						<td></td>
+					</tr>
+					<tr class="VNeed">
+						<td class="Left">买方支出价值</td>
+						<td>公告中买方支出的价值。数据库中已有，需要校对。</td>
+					</tr>
+					<tr><td colspan="2">&emsp;</td></tr>
+					<tr class="VNeed">
+						<td class="Left">财务数据来源</td>
+						<td>审计报告链接；如无审计报告，填含财务数据的并购公告链接</td>
+					</tr>
+					<tr  class="VNeed">
+						<td class="Left">t期财务数据</td>
+						<td>[评估基准日]的财务数据</td>
+					</tr>
+					<tr class="VNeed">
+						<td class="Left">t-1期财务数据</td>
+						<td>[评估基准日]前一年的财务数据。如：2022-04-30的前一年为2021-12-31</td>
+					</tr>
+				</table>
+				<p>&emsp;</p>
+
+				<h3 id="C22">（二）变量具体录入说明</h3>
+
+				<h4 id="C221">1.&emsp;交易编号</h4>
+
+				<p>交易编号的格式为<span style="font-style: italic;">Id+Year+Num</span>。其中，Id为六位数股票代码，Year为四位数年份代码，Num为两位数的序号代码。</p>
+				<p>例如，对于上市公司（Id:000016）在2017年的第1笔并购，编号为：</p>
+				<code><span style="background-color: #ddecf7;">000016</span><span style="background-color: #e2efd9;">2017</span><span style="background-color: #fff2cc;">01</span></code>
+
+				<h4 id="C222">2.&emsp;并购的地理要素：跨[ ]并购</h4>
+				<p>若并购类型为“跨国、跨省或跨市”，则在对应变量下方填1。</p>
+				<p>例如，跨省并购必然是跨市并购，但我们只需在跨省的下方填1即可。</p>
+				<p>若并购发生在本市内，则于“跨市并购”填0，避免检查时误解为漏做。</p>
+
+				<h4 id="C223">3.&emsp;并购的行业要素：横向、纵向与混合并购</h4>
+				<p>横向并购：收购竞争者的企业；</p>
+				<p>纵向并购：收购供应商或客户；</p>
+				<p>混合并购：既不属于横向、也不属于纵向的并购。</p>
+				<p>易错点：错误常见于横向并购与混合并购难以区分。横向并购强调的是<span style="font-weight: bold;">竞争者</span>之间的并购。有时并购发生在同行之间，但双方不构成直接的竞争关系，则视为混合并购。</p>
+				<p>例如，生产汽车不同金属零部件的厂家，可能属于同一行业，甚至拥有同样的供应商和工艺。但由于最终的产品不同，所以没有竞争关系，发生在他们之间的并购属于混合并购。</p>
+
+				<h4 id="C224">4.&emsp;并购的目的要素：产品……技术</h4>
+				<p>或许之后不需要了，暂空。</p>
+
+				<h4 id="C225">5.&emsp;并购的支付方式</h4>
+				<p>并购主要包括三种支付方式，按照比例填列。</p>
+				<p>例如，一起并购为“发行股份及支付现金购买资产”，其中，现金支付对价1,000万元，股份支付对价9,000万元，则三项变量分别填列：10%、90%和0%。</p>
+
+				<h3 id="C23">（三）数据录入流程参考</h3>
+
+				<p>本数据库使用<a id="正文" href="http://www.cninfo.com.cn/new/index" target="_blank">巨潮资讯网</a>作为原始信息来源。</p>
+
+				<h4 id="C231">1.&emsp;确定公告搜索范围</h4>
+
+				<p>在网站右上角的搜索栏粘贴或输入上市公司的代码，进入页面。</p>
+
+				<div style="width: 100%;">
+					<img src="../../Art/Step1Img1.png" style="margin: auto;"/>
+				</div>
+				<p class="Caption">图1</p>
+				<p>将[首次公告日期]和[最新公告日期]粘贴进入日期选择器内。由此确定好搜索范围。</p>
+				<img src="../../Art/Step1Img2.png"/>
+				<p class="Caption">图2</p>
+
+				
+				<h4 id="C232">2.&emsp;确定并购公告</h4>
+				<p>A股市场的并购公告大致可以分为两种类型。其一是以发行股份购买资产为代表的报告书式公告，上市公司需要披露并购交易计划报告书，内容十分详尽。另一种是普通式公告，只包含较少的资料。</p>
+				<p class="Caption">表2 不同类型的并购公告</p>
+				<table>
+					<tr>
+						<td></td>
+						<td>公告内容</td>
+						<td>支付方式</td>
+						<td>审计报告</td>
+						<td>交易规模</td>
+					</tr>
+					<tr>
+						<td>报告书式公告</td>
+						<td>丰富</td>
+						<td>一般包含股票支付</td>
+						<td>一定公布审计报告</td>
+						<td rowspan="2">无差异</td>
+					</tr>
+					<tr>
+						<td>普通式公告</td>
+						<td>较少</td>
+						<td>不包含股票支付</td>
+						<td>不一定有审计报告</td>
+					</tr>
+				</table>
+				<p>我们首先在确定好的公告范围中搜索关键字“报告书”，确定是否为报告书式公告。</p>
+				<img src="../../Art/Step2Img1.png""/>
+				<p class="Caption">图3</p>
+				<p>如 图3 所示，可以搜索到[报告书]与[报告书摘要]，我们选择报告书作为原始数据的来源。</p>
+				<br />
+				<p>如果没有报告书，我们采取从后往前（即先看时间早的公告）的方式，来查找并购公告。</p>
+				<p>这是由于，报告书式的并购过程较长、披露要求较多，因此会披露多个版本的报告书，我们选择时间最晚的版本，信息质量最高。</p>
+				<p>对于普通的并购，往往只在第一份公告中说明并购的详细信息，后续的进展公告中缺少我们需要的内容。因此我们有限看发布时间最早的公告。如图4所示。</p>
+				<img src="../../Art/Step2Img2.png"/>
+				<p class="Caption">图4</p>
+				<p>由此，我们就找到了并购的公告，可以以此填写半数变量。另一部分的变量需要找到并购标的的审计报告。没有审计报告的，则并购公告中包含了我们的财务数据。</p>
+				<p>Tips：如果是普通式的并购，没有审计报告，且公告中没有财务数据，则我们跳过此条不录。同时将[交易编号]一栏填充为<span style="background-color: #ddebf7;">&emsp;&emsp;</span>。（仍需进行编号）</p>
+				
+				<h4 id="C233">3.&emsp;在并购公告中寻找资料</h4>
+
+				<p>由于普通式的并购公告篇幅很短，浏览方便，本节以报告书式公告为例，说明寻找资料的过程。</p>
+				<p>首先我们打开公告。</p>
+
+				<img src="../../Art/Step3Img1.png" style="display: inline;width:45%;text-align: center;"/>
+				<img src="../../Art/Step3Img2.png" style="display: inline;width:45%;text-align: center;"/>
+
+				<p class="Caption">图5</p>
+				<p>在“交易的目的”中，一般会介绍双方的行业和产品，由此可以判断横向、纵向还是混合并购。</p>
+				<p>在“交易的具体方案”中，包含有并购的价格、支付方式等信息，以及收购比例、是否通过本次并购实现控制（合并报表）。</p>
+				<p><span style="font-weight: bold;">注意：</span>对于并购的行业要素（横向、纵向和混合），填列时以批注的形式，将用于判断的<span style="font-weight: bold;">报告原文</span>附上，以便未来检查。</p>
+				<p>自此往下，可以翻到业绩承诺的相关信息。也可以使用 ctrl+F 进行搜索。</p>
+				<p>有些业绩承诺又叫盈利预测补偿协议，具体可在报告书中“本次交易相关合同的主要内容”这一章节中找到。</p>
+				<p>最后，公告中有对上市公司和标的公司的介绍章节，可以判断双方的地理位置（有时也可通过公司名字判断）。</p>
+
+				<h4 id="C234">3.&emsp;填列财务数据</h4>
+				
+				<p>从审计报告中取得（标的公司的）财务数据较为简单。但是并购活动披露的审计报告规范性不强，多为扫描件，无法复制粘贴。这里提供一个录入财务数据的方法参考。</p>
+				<img src="../../Art/Step4Img1.png"/>
+				<p class="Caption">图6</p>
+				首先我们打开了一份标的公司的审计报告。本数据库中，我们只要合并报表数据，不要母公司报表数据。
+				<p>同时，我们新建一个excel文档，设置如下：</p>
+
+				<img src="../../Art/Step4Img2.png"/>
+				<p class="Caption">图7</p>
+
+				<p>说明：由于我们的数据库中，t期和t-1期的财务数据是横向填列的（放在一行里）。按照这个方式填财务数据，需要先把报表从上往下（从资产负债表翻到现金流量表），填完t期，再翻回到开头填t-1期，非常麻烦。</p>
+				<p>所以先在excel中，按照报表原本的样式填好。然后在（图中为第11、12行）中将填好的数据转置为一行，再粘贴入数据库表中。</p>
+				<p>关于转置函数 transpose 的用法可以自己上网搜索学习。</p>
+				<p>tips：也可以在此表中集成一个速算不同支付方式比例的功能。</p>
+				<p>tip2：对于缺失的数据不能填0。设置 if(数据="", "", 数据) ，避免缺失的数据被自动变成0。</p>
+
+				<h3 id="C24">（四）可能遇到的特殊情况</h3>
+				<h4 id="C241">1.&emsp;同时收购多家企业</h4>
+				<p>同时收购多家企业的，可能的情况是：</p>
+				<p>(1)收购多家企业ABCD，它们都是同一家企业E的股东。因此并购的实际目的是取得E的股权。</p>
+				<p>面对这种情况，我们视E为并购的标的，所有变量以此为中心进行录入。包括收购比例、财务数据、地理因素、行业因素等等。</p>
+				<p>(2)收购多家企业，彼此都是实际的经营单位。</p>
+				<p>面对这种情况，如果能够分别取得各家企业的收购价格和财务数据，则将此条目拆分成N条。如果不能的，继续实为同一条数据。</p>
+				<p>如果不能拆分的，在“收购比例”中标记 NAN，后续人工进行处理（尝试计算加权比例）。</p>
+
+				
+				<h4 id="C242">2.&emsp;收购与增资</h4>
+				<p>一些情况下，企业的收购合同中包含了收购完成后的增资承诺。在这种情况下，我们要注意判断，增资是否影响企业对标的公司的控制。</p>
+				<p>例如，企业收购了某公司30%的股份，之后又继续增资，使得最终持股比例达到51%，实现控制。</p>
+				<p>在这样的情况下，企业的最终目的是实现控制，因此收购与增资两个环节不宜拆分看待。因此：（1）在收购支付金额中，加上增资的金额；（2）在t期的流动资产、资产、所有者权益中，加入增资的数额（如果增资不能确定是不是现金的，就只改变总资产和所有者权益）</p>
+
+				<h4 id="C24Z">3.&emsp;其他情况</h4>
+				<p>原始数据库中出现重复条目：删除此行。</p>
+				<p>审计报告中只有财务报表附注，没有财务报表：实为没有审计报告，在并购公告中寻找财务数据。</p>
+				<p>其他情况：随时补充。</p>
+				<br /><hr /><br />
+			</div>
+		</div>
+	</body>
+</html>
