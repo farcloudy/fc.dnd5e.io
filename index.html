@@ -1,30 +1,26 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>胡琴菜园</title>
+		<title>东行记</title>
 		<link rel="icon" href="Art/Hu.gif" type="image/gif" sizes="16x16" />
 		<link rel="stylesheet" type="text/css" href="Css/Font.css" />
 		<link rel="stylesheet" type="text/css" href="Css/Main.css" />
 		<link rel="stylesheet" type="text/css" href="Css/Text.css" />
-		<script src="Js/jquery-3.5.1.js"></script>
+		<script src="Js/jQuery.js"></script>
 		<script src="Js/Main.js"></script>
 	</head>
-	<body>
+	<body onload="SetWindowCenterList(['div.Main']);">
 		<div class="Main">
-			<p>主页建设中……</p>
-			<p>并购数据库：<a href="DataBase/M&A/index.html" target="_blank">录入说明</a></p>
-			<p>当前计划：</p>
-			<ul>
-				<li>手机端（竖版）布局适配</li>
-				<li>注册与登录；使用node.js管理服务</li>
-				<li>把网站挪到自建站点上</li>
-				<li>在线数据录入 & 后台数据版本管理 & 后台数据录入范围管理</li>
-				<li>链接文本识别OCR、自然语言处理NPL的外部资源（有成本，开一个收款码）</li>
-				<li>诚招美工，新做一个logo，把胡老师放下来</li>
-				<li>实现发帖与评论</li>
-				<li>相册与优秀论文陈列</li>
-				<li>资源库（放个百度网盘就行，不然太费钱了）</li>
-			</ul>
+			<div id="title" class="startWindow">
+				东&emsp;行&emsp;记
+			</div>
+			<div id="startMenu" class="startWindow">
+				<div class="startMenuChild"><p>开始游戏</p></div>
+				<div class="startMenuChild"><p>继续游戏</p></div>
+				<div class="startMenuChild"><p>游戏设置</p></div>
+				<div class="startMenuChild"><p>成就列表</p></div>
+				<div class="startMenuChild"><p onclick="startMenu_Staff();">人员名单</p></div>
+			</div>
 		</div>
 	</body>
 </html>
