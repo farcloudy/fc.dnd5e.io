@@ -1,0 +1,33 @@
+/* battleWindow */
+div#battleWindow div.character{
+	position: fixed;
+	height: 60%;
+	width: 100%;
+}
+div#battleWindow div#player{
+	top:40%
+}
+
+
+
+
+#player .components{
+	float: left;
+	border: 1px solid;
+}
+
+#player #timer{
+	width: 10%;
+	height: 10em;
+	margin: 10% 5%;
+}
+#player #handCards{
+	width: 40%;
+	height: 10em;
+	margin: 10% 5%;
+}
+#player #playerImg{
+	width: 20%;
+	height: 100%;
+	margin: 0% 5%;
+}

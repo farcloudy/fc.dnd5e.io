@@ -1,0 +1,49 @@
+*{
+	padding:0;
+	margin:0;
+	box-sizing: border-box;
+}
+
+html, body, body div.Window{
+	height: 100%;
+	width: 100%;
+}
+
+body div.Window{
+	position: fixed;
+}
+
+/* startWindow */
+#startWindow .Component{
+	width: 100%;
+}
+
+#startWindow #title{
+	height: 60%;
+}
+
+#startWindow #menu{
+	height: 40%;
+	padding: 0 30%;
+}
+
+#startWindow .startMenuChild{
+	float: left;
+	width: 20%;
+}
+
+#startWindow .startMenuChild p{
+	writing-mode: vertical-rl;
+	margin: auto;
+	font-size: 1.5em;
+	border: 1px solid;
+	border-radius: 5px;
+	padding: 0.5em 0.25em;
+}
+
+#startWindow .startMenuChild p:hover{
+	cursor: pointer;
+	background-color: black;
+	color: white;
+}
+
